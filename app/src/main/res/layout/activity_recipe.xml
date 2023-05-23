@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg"
+    tools:context=".RecipeActivity">
+
+    <ImageView
+        android:id="@+id/imageView4"
+        android:layout_width="16dp"
+        android:layout_height="16dp"
+        android:layout_marginEnd="8dp"
+        app:layout_constraintBottom_toBottomOf="@+id/tvRecRating"
+        app:layout_constraintEnd_toStartOf="@+id/tvRecRating"
+        app:layout_constraintTop_toTopOf="@+id/tvRecRating"
+        app:srcCompat="@drawable/star_favorite" />
+
+    <ImageView
+        android:id="@+id/imageView5"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_marginStart="8dp"
+        app:layout_constraintBottom_toBottomOf="@+id/tvRecRating"
+        app:layout_constraintStart_toEndOf="@+id/tvRecCalories"
+        app:layout_constraintTop_toTopOf="@+id/tvRecRating"
+        app:layout_constraintVertical_bias="0.0"
+        app:srcCompat="@drawable/calories" />
+
+    <ImageView
+        android:id="@+id/imgRecPhoto"
+        android:layout_width="0dp"
+        android:layout_height="250dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:background="@drawable/img_round"
+        android:scaleType="centerCrop"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:srcCompat="@tools:sample/avatars" />
+
+    <TextView
+        android:id="@+id/tvRecLabel"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="16dp"
+        android:text="Label"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/imgRecPhoto"
+        app:layout_constraintTop_toBottomOf="@+id/imgRecPhoto" />
+
+    <TextView
+        android:id="@+id/tvRecDesc"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="Desc"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="@+id/tvRecLabel"
+        app:layout_constraintStart_toStartOf="@+id/tvRecLabel"
+        app:layout_constraintTop_toBottomOf="@+id/tvRecLabel" />
+
+    <TextView
+        android:id="@+id/tvRecCalories"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="calories"
+        app:layout_constraintStart_toStartOf="@+id/tvRecDesc"
+        app:layout_constraintTop_toBottomOf="@+id/tvRecDesc" />
+
+    <TextView
+        android:id="@+id/tvRecRating"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="rating"
+        app:layout_constraintEnd_toEndOf="@+id/tvRecDesc"
+        app:layout_constraintTop_toBottomOf="@+id/tvRecDesc" />
+
+    <Button
+        android:id="@+id/btnBack"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="16dp"
+        android:text="Вернуться назад"
+        android:textColor="@color/accent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>

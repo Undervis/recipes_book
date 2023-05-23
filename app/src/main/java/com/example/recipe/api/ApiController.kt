@@ -5,19 +5,15 @@ import retrofit2.converter.gson.GsonConverterFactory
 import retrofit2.converter.scalars.ScalarsConverterFactory
 
 
-class ApiController {
+object ApiController {
+    private var retrofit: Retrofit? = null
+    private var baseUrl = "https://api.edamam.com/"
 
-private val baseUrl = "https://api.edamam.com"
-
-    fun createRecipeApi(): RecipeApi{
-        val retrofit = Retrofit.Builder()
+    fun getClient(): Retrofit {
+        retrofit = Retrofit.Builder()
             .baseUrl(baseUrl)
-            .addConverterFactory(
-                ScalarsConverterFactory.create()
-            )
             .addConverterFactory(GsonConverterFactory.create())
             .build()
-
-        return retrofit.create(RecipeApi::class.java)
+        return retrofit!!
     }
 }
